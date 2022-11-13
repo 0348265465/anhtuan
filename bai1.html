@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="main.js"></script>
+</head>
+<body>
+        <h1>Tổng các số nguyên tố</h1>
+        <input type="number" id="soa" name='soa'/>
+        <input type="number" id="sob" name='sob'/> <br/>
+        <span id="result"></span> <br/>
+        <button onclick="tinhtong()">Tính tổng</button>
+        <p id="tong"></p>
+        <script>
+            function tinhtong(){
+                let a = Number(document.getElementById("soa").value);
+                let b = Number(document.getElementById("sob").value);
+                let arr=new Array(); j=0; tong=0;
+                for (i=a; i<=b; i++ ){
+                    arr[j]= i;
+                    tong+= i;
+                    if(i%2==0){
+                    tong+=i;
+                }
+                    j++;}
+                    document.getElementById('tong').innerHTML = arr + " Có tổng là " +tong;
+            }
+            
+            
+        </script>
+    
+</body>
+</html>
